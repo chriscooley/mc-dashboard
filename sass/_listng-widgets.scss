@@ -1,0 +1,62 @@
+// Priceline Widget
+.rs_searchbox {
+	background-color: $sub-bar;
+	padding: 3% 4%;
+	position: relative;
+	overflow: visible;
+	&:after {
+		clear:both;
+		content: '';
+		display: block;
+	}
+	select {
+		float: left;
+	    margin: 0 4% 2% 0;
+	    width: 40%;
+	    &.rs_multiSearchBoxRooms {
+	    	width: 30%;
+	    }
+	}
+	.left {
+		float: left;
+	    position: relative;
+	    width: 100%;
+	}
+	.label {
+		font-weight: bold;
+	}
+	.calendar {
+		@extend %iconBg;
+		background-position: -122px 7px;
+		background-color: $blue;
+	    cursor: pointer;
+	    display: block;
+	    float: right;
+	    margin:0;
+	    cursor: pointer;
+	    @include square-box($square-w:12%, $circle: true);
+	    &:hover {background-color: $green;}
+	}
+	.rs_multiSearchBoxCalendar, .rs_multiSearchBoxAutosuggestResults {
+		position: absolute;
+		top: 20%;
+		display: none;
+	}
+	.search {
+		background-color: #A0CF6E;
+	    border: 0 none;
+	    color: #FFFFFF;
+	    display: block;
+	    font-size: 1em;
+	    font-weight: bold;
+	    line-height: 1.2em;
+	    padding: 0.6em;
+	    text-align: center;
+	    width: 66%;
+	    margin: 0;
+	    cursor: pointer;
+		&:hover {
+			background-color: $red;
+		}
+	}
+}

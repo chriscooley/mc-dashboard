@@ -1,0 +1,48 @@
+.col2-srp {
+	.tabs {
+		a#nav_overview, a#nav_map , a {width: 20%;}
+	}
+	.lPhotos {
+		.previous, .next, b {
+			color:$blue; 
+			cursor: pointer; 
+			line-height: 1.6em; 
+			float: right;
+			margin: 0 0 0 .2em;
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+	.result.more {
+		padding: 2%;
+	}
+}
+
+.most {
+	overflow: hidden;
+	ul {
+		line-height: 1.5em;
+		list-style: none;
+		width: 33.33%;
+		float: left;
+		display: block;
+	}
+	h3 { 
+		line-height: 1.5em;
+		.icon {
+			@include square-box($square-w:1.5em);
+			display: block;
+			float: left;
+			margin: 0 .2em 0 0;
+			&.mp {background-position: -63px -1880px;}
+			&.mr {background-position: -63px -1787px;}
+			&.mv {background-position: -63px -1974px;}
+		}
+	}
+	a {
+		padding: 0 1em 0 0;
+		display: block;
+		@extend %ellipsis;
+	}
+}

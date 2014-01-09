@@ -1,0 +1,1345 @@
+// This Sass file holds all listing styles
+
+// mainSection -------------------------------------------------
+
+// claim button
+.claim {
+	background:$orange;
+	color: $white;
+    display: inline-block;
+    padding: .6em .8em .6em 2.8em;
+    line-height: 1em;
+    position: absolute;
+    top: -50px;
+	span {
+		@extend %iconBg;
+		background-position: 50% 0; 
+		display:block;
+	}
+	.arrow {
+		background-position: 50% 9%;
+		position: absolute;
+	    height: 56px;
+	    left: -23px;
+	    width: 30px;
+	    z-index: 9;
+	}
+	.flag {
+		display: inline-block;
+		@include square-box($square-w: 2.2em);
+		background-position:50% 12%;
+		background-color:$sub-bar;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	&:hover {
+		color: $white;
+		background:$blue;
+		.arrow {
+			background-position: 50% 14%;
+		}
+		.flag {
+			background-position: 50% 17%;
+		}
+	}
+}
+
+// Tabs
+.tabs {
+	width:100%;
+	text-align:left;
+	margin: 0 0 1.875em 0;
+	@extend %clear;
+	.icon {
+		background-position: 50% 77%;
+		// @include square-box ($square-w: 20%, $square-p: 0 0 14% 0);
+		@include square-box ($square-w: 26px, $square-p: 0 0 18px 0);
+		margin: .6em auto .4em auto;
+		float: none;
+		&.ov {background-position:100% 77%;}
+		&.ma {background-position:100% 78%;}
+		&.rv {background-position:100% 76%;}
+		&.ph {background-position:100% 79%;}
+		&.bl {background-position:100% 80%;}
+		&.cu {background-position:100% 81%;}
+		&.nl {background-position:100% 82%;}
+		&.pr {background-position:100% 83%;}
+		&.cn {background-position:100% 84%;}
+		&.ne {background-position:100% 85%;}
+	}
+	a, .more {
+		border-bottom: 10px solid $gray;
+		display: block;
+	    float: left;
+	    padding: .8em 0;
+	    width: 16%;
+	    font-size: 80%;
+	    color: $gray;
+	    cursor: pointer;
+	    position: relative;
+	    text-align: center;
+	    @extend %nthBg;
+	    span {
+		    @extend %countUi;
+		    z-index: 9;
+		}
+		&:hover {
+			background-color: $blue;
+			color: #fff;
+			.ov {background-position:0 77%;}
+			.ma {background-position:0 78%;}
+			.rv {background-position:0 76%;}
+			.ph {background-position:0 79%;}
+			.bl {background-position:0 80%;}
+			.cu {background-position:0 81%;}
+			& > span {
+				color: #fff;
+			}
+		}
+		&.active {
+			border-bottom: 10px solid $blue;
+			color: $blue;
+			.ov {background-position:50% 77%;}
+			.ma {background-position:50% 78%;}
+			.rv {background-position:50% 76%;}
+			.ph {background-position:50% 79%;}
+			.bl {background-position:50% 80%;}
+			.cu {background-position:50% 81%;}
+			&:hover {
+				@extend %nthBg;
+				& > span {
+					color: #fff;
+				}
+			}
+		}
+	}
+	// width
+	#nav_overview {width: 13%;}
+	#nav_map {width: 13%;}
+	#nav_map {width: 13%;}
+	#nav_map {width: 13%;}
+	#nav_map {width: 13%;}
+	.more {
+		width: 10%;
+		.icon.mo {
+			width:10px;
+			background-position: 100% -568px;
+		}
+		&:hover .icon.mo {
+			background-position: 100% -590px;
+		}
+		.moreNav {
+			display: none;
+			position: absolute;
+			text-align: left;
+			width: 210%;
+			right: 0;
+			margin: .8em 0 0 0;
+			overflow: hidden;
+			z-index: 9;
+			border: 6px solid $main-bar;
+			border-top: none;
+			a {
+				text-transform:uppercase;
+				border: 0 none;
+				display: block;
+				width: 100%;
+				padding: .8em 0;
+				&:hover {
+					.nl {background-position:0 82%;}
+					.pr {background-position:0 83%;}
+					.cn {background-position:0 84%;}
+					.ne {background-position:0 85%;}
+				}
+				&.active {
+					.nl {background-position:50% 82%;}
+					.pr {background-position:50% 83%;}
+					.cn {background-position:50% 84%;}
+					.ne {background-position:50% 85%;}
+				}
+			}
+		}
+		&:hover {
+			.moreNav {
+				display: block;
+			}
+		}
+	}
+}
+
+
+%mainInfo {
+	display: block; 
+	margin: 1% 0;
+	line-height: 1.8em;
+	.icon {
+		display: block;
+		@include square-box ($square-w:25px);
+		float: left;
+		margin: 0 1% 0 0;
+		background-position: 100% 24%;
+	}
+}
+
+// info
+.info, .srp, .hubResults, .mapBubble {
+	&:after {
+		clear:both;
+		content: '';
+		display: block;
+	}
+	.addImage {
+		float: right;
+		background-color: $green;
+		text-align: center;
+		color: #fff;
+		font-size: 90%;
+		margin: 0;
+		@extend %imgMask;
+		background-image: none;
+		& span {
+			display: block;
+			font-weight: bold;
+			font-size: 1.8em;
+		}
+		&:hover {
+			background-color: $blue;
+		}
+	}
+	& > img {
+		@extend %imgMask;
+	}
+	.imgMask {
+	    float: right;
+	    margin: 0;
+	}	
+	h1 {
+		font-size: 2.2em;
+	}
+	.rating {
+		overflow: hidden;
+		margin: 2% 0 0 0;
+		.star, a {float: left;}
+		.star {margin: 0 0 0  1.7em;}
+		a {display:block; margin: 0 0 0 1%; position:relative; line-height: 1.4em;}
+		.bCount {@extend %countUi; top:2px; left:52px;}
+	}
+	.phone {
+		color: $blue;
+		font-size: 2em;
+		font-weight: bold;
+		line-height: 1em;
+		margin: 2% 0;
+		@extend %mainInfo;
+		.icon {
+			margin: .4% 1% 0 0;
+			background-position:50% 43%;
+		}
+	}
+	.directions {
+		@extend %mainInfo;
+		.icon {
+			background-position:50% 45%;
+		}
+	}
+	.url {
+		@extend %mainInfo;
+		.icon {
+			background-position:50% 47%;
+		}
+	}
+	.hours {
+		@extend %mainInfo;
+		.icon {
+			background-position:50% 53%;
+		}
+	}
+	.payment {
+		@extend %mainInfo;
+		.icon {
+			background-position:50% 49%;
+		}
+	}
+	.quote {
+		display: inline-block;
+		background-color: $soft-bg;
+		line-height: 2.2em;
+		color: $blue;
+		font-weight: bold;
+		padding: 0 .8em 0 0;
+		.icon {
+			@include square-box ($square-w:2.2em);
+			background-position: 50% 39%;
+			background-color: $blue;
+			margin: 0 .8em 0 0;
+			float: left;
+		}
+		&:hover {
+			background-color: $green;
+			color: #fff;
+		}
+	}
+	i {
+		display: block;
+		text-align: right;
+		float: right;
+		line-height: 1.6em;
+		font-size: .8em;
+		position: relative;
+		margin: -1em 0 0 0;
+		& > a, & > img {
+			display: block;
+		}
+	}
+}
+.info {
+	.imgMask {
+	    border: 4px solid $blue;
+	    &:hover { border: 4px solid $green;}
+	}
+}
+
+// CG info -------------
+.cgInfo {
+	overflow: hidden;
+	.cgImg {
+		@extend %imgMask;
+		float: right;
+	}
+	.cgLinks {
+		overflow: hidden;
+		a {
+			@extend %iconBg;
+			display: block;
+		    float: left;
+		    margin: 0 10px 0 0;
+		    padding: 2px 0 3px 23px;
+			&.re {background-position: -129px -2166px;}
+			&.em {background-position: -129px -2191px;}
+			&.pr {background-position: -129px -2217px;}
+			&.rv {background-position: -129px -2246px;}
+			&.me {background-position: -129px -2272px;}
+			&.wb {background-position: -129px -2299px;}
+			&.vi {background-position: -129px -2322px;}
+		}
+	}
+	p, & > a, .cgLinks {
+		margin: 0 0 1% 0;
+		display: block;
+	}
+	i {
+		display: block;
+	    line-height: 28px;
+	    text-align: right;
+		a {
+			display: block;
+			float: right;
+			img {
+				margin: 0 0 0 6px;
+			}
+		}
+	}
+}
+
+
+// about
+.about {
+	p {
+		margin: 0 0 1em 0;
+	}
+}
+
+// writeReview
+.writeReview, .userInput {
+	overflow: hidden;
+	border-top: 10px solid $gray;
+	border-bottom: 10px solid $gray;
+	position: relative;
+	.mainSection & h2 {margin: 2% 0;}
+	.myRtng {
+		float: right;
+		margin: 1.5% 0;
+		width: 30%;
+		b {
+			float: left;
+			display: block;
+			line-height: 1.4em;
+			margin: 0 1% 0 0;
+		}
+		.star {float:right;}
+	} 
+	input[type="text"], textarea {width: 100%;}
+	.toolTip, input.title[type="text"], .reviewText {
+		width: 67%;
+		float: left;
+		clear: left;
+	}
+	.reviewOption, .inputOption {
+		width:30%;
+		position: absolute;
+		bottom: 4%;
+		right: 0;
+	}
+	input[type="radio"], input[type="checkbox"], label {
+		float: right;
+		display: block;
+	}
+	input[type="radio"], input[type="checkbox"] {
+		margin: 1% 1% 3% 0;
+	}
+	label {
+		width: 88%;
+		margin: 0 0 4% 0;
+	}
+	.reviewSubmit, .inputSubmit {
+		background: $green;
+		width: 100%;
+		border: 0 none;
+		color: #fff;
+		font-weight: bold;
+		padding: 2% 4%;
+		font-size: 1.2em;
+		cursor: pointer;
+		&:hover {background:$red;}
+	}
+	.gError {
+	    float: left;
+	    margin: 0 0 1% 0;
+	    width: 67%;
+	}
+	.captcha {
+		span {font-size: .9em; margin:.4em 0 0 0; font-style: italic;}
+		img {margin:0 0 .4em 0;}
+		.toolTip {
+			width: 100%;
+			margin:.4em 0;
+			.toolBody {
+				left: -14em;
+				&:before {
+				    background-position: 100% -228px;
+				    left: 98%;
+				}
+			}
+			&.tError {
+				.toolBody {
+					&:before {
+						background-position: 100% -199px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// readReview 
+.sort {
+	float: right;
+	margin: .2em 0 0 0;
+	label, a {
+		display: inline-block;
+		float: left;
+		line-height: 1.6em;
+	}	
+	a {
+		font-size: 1em;
+		padding: .25em .5em;
+		background-color: $blue;
+		color: #fff;
+		line-height: 1em;
+		margin: 0 0 0 .2em;
+		&:hover {
+			background-color: $green;
+		}
+	}
+}
+.review {
+	overflow: hidden;
+	padding: 3%;
+	@extend %nthBg;	
+	& > img {
+		@extend %imgMask;
+	}	
+	.imgMask, & > img {
+		width: 60px;
+		height: 60px;
+		margin: 0 2% 2% 0;
+	}
+	.star {
+		display: inline-block;
+		margin: 0 0 0 1.7em;
+	}
+	h3 {
+		margin: 1.5% 0 1% 0;
+	}
+	a h3:hover {
+		color: $blue;
+	}
+	p {
+		clear: both;
+	}
+	i {
+		width: 100%;
+		display:block;
+		margin: 2% 0;
+		text-align: right;
+		& > a {
+			font-weight: bold;
+		}
+	}
+	.social {
+		float: right;
+	}
+}
+
+// pagination
+.pagination {
+	text-align: center;
+    float: left;
+    margin: 2% 0 0 0;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+	a {
+		padding: .2em .3em;
+		margin: 0 .16em;
+		background-color: $soft-bg;
+		display: inline-block;
+		&:hover, &.active {
+			background-color: $blue;
+			color:#fff;
+		}
+	}
+	span {
+		padding: .2em .3em;
+		margin: 0 .16em;
+		color: $gray-sub;
+	}
+}
+
+// shoutouts
+.shoutouts, .comments {
+	.result {
+		overflow: hidden;
+		.imgMask {
+			margin: 2%;	
+		}
+		span {
+			font-weight: bold;
+		}
+		p, i {margin: 3% 0 0 0;padding: 0 2%;}
+		i {margin: 0 0 2% 0; display: block;}
+		.response {
+			text-align: right;
+			background-color: #fff;
+			overflow: hidden;
+			width: 100%;
+			float: left;
+			margin: 2% 0 0 0;
+			p, i {font-style: italic;}
+			.imgMask {float: right;}
+		}
+	}
+	a.result {
+		padding: 2% 3%;
+		display: block;
+	}
+}
+
+// subSection -------------------------------------------------
+
+// browse By
+.browseBy {
+	overflow: hidden;
+	.linkBox {
+		background: $soft-bg;
+		overflow: hidden;
+		&.hide {
+			// 1.8em x 6 links 10.8em
+			height: 10.8em;
+		}
+	}
+	a {
+		font-size: 1em;
+		line-height: 1.8em;
+		display: block;
+		padding: 0 1em;
+		&:hover {
+			background: $blue;
+			color: #fff;
+		}
+	}
+}
+
+// myNetwork
+.myNetwork {
+	.result {
+		overflow: hidden;
+		h3, h4 {
+			margin: 1em 0 0 0;
+		}
+		span {
+			color: $blue;
+			cursor: pointer;
+			margin: 0 .4em 0 0;
+			text-decoration: underline;
+			&:hover {
+				color: $gray-sub;
+				text-decoration: none;
+			}
+		}
+		& > .icon {
+			padding: 3.6em 2em;
+			margin: 0 4% 0 0;
+			float: left;
+			background-position: 100% 24%;
+		}
+		&.near {
+			& > .icon {
+				background-position: 50% 36%;
+				background-color: $yellow;
+			}
+			a {	
+				margin: 0.4em 0 0 0;
+				display: inline-block;
+				width: 38%;
+				& > .icon {
+					width: 1.4em;
+					height: 1.2em;
+					margin: 0 .2em 0 0;
+					float: left;
+				}
+				&.re {.icon {background-position:0 92%;} &:hover .icon {background-position:0 96%}}
+				&.sh {.icon {background-position:0 93%;} &:hover .icon {background-position:0 97%}}
+				&.mo {.icon {background-position:0 94%;} &:hover .icon {background-position:0 98%}}
+				&.ev {.icon {background-position:0 95%;} &:hover .icon {background-position:0 99%}}
+			}
+		}
+		&.network, &.networkSmall {
+			.icon {
+				background-position: 50% 31%;
+				background-color: $green;
+			}
+		}
+		&.neighbors, &.neighborsSmall {
+			.icon {
+				background-position: 50% 26%;
+				background-color: $orange;
+			}
+		}
+		&.neighborsSmall, &.networkSmall {
+			.icon {
+				padding: 3em 2em;
+			}
+		}
+		.inMy {
+			a {
+				@include square-box($square-w:6%, $circle: true, $square-b: true, $border-size: 2px, $border-style: solid $blue);
+				margin: 1.5% 2.5% 0 0;
+				display: block;
+				float: left;
+				// background-color: $blue;
+				overflow: hidden;
+				&:hover {
+					border-color: $red;
+				}
+			}
+		}
+	}
+}
+
+// asideSection -------------------------------------------------
+
+// merchantScore
+.merchantScore {
+	background: $sub-bar;
+	text-align: center;
+	overflow: hidden;
+	& > .icon {
+		display: block;
+		float: left;
+		margin: 2% 3%;
+		@include square-box($square-w:19%, $circle: true);
+		background-color: $blue;
+		&.b1 {
+			background-position: 50% 59%;
+			background-color: $green;
+		}
+		&.b2 {
+			background-position: 50% 61%;
+			background-color: $orange;
+		}
+		&.b3 {
+			background-position: 50% 63%;
+			background-color: $blue;
+		}
+		&.b4 {
+			background-position: 50% 65%;
+			background-color: $yellow;
+		}
+		&.noB {background-color: $gray-sub;}
+	}
+	h3 {
+		@extend %iconBg;
+		background-position: 0 57%;
+		background-color: $blue;
+		color: #fff;
+		padding: 2% 0;
+		.icon {
+
+		}
+	}
+	h5 {
+		background: $soft-bg;
+		width: 100%;
+		padding: 2% 0;
+		color: $blue;
+		line-height: 1em;
+		font-size: 6em;
+	}
+}
+
+// map
+.mapBox, .srpMap {
+	overflow: hidden;
+	.map {
+		overflow: hidden;
+		display: block;
+		@include square-box($square-w:93%, $circle: true, $square-b: true, $border-size: 6px, $border-style: solid $blue);
+		&:hover {
+			border:6px solid $green;
+			cursor: pointer;
+		}
+	}
+	// a {
+	// 	display: block;
+	// 	float: left;
+	// 	text-align: left;
+	// 	text-decoration: underline;
+	// 	&:hover {
+	// 		text-decoration: none;
+	// 	}
+	// }
+	// .expandMap {
+	// 	display: block;
+	// 	float: right;
+	// 	@include square-box($square-w:10%);
+	// 	@extend %iconBg;
+	// 	background-position: 50% 67%;
+	// 	cursor: pointer;
+	// 	&:hover {background-position: 50% 69%;}
+	// }
+}
+
+// offers
+.offers {
+	overflow: hidden;
+	h2 {
+		span {
+			font-weight: normal;
+			color: $green;
+		}
+	}
+	.result {
+		overflow: hidden;
+		cursor: pointer;
+		display: block;
+		.icon {
+			padding: 12% 8%;
+			margin: 0 4% 0 0;
+			float: left;
+			background-position: 50% 71%;
+			background-color: $green;
+		}
+		h4, p {
+			@include ellipsis();
+			padding: 0 2% 0 0;
+		}
+		h4 {
+			padding: 2% 2% 0 0;
+		}
+		&:nth-child(2n+1) {
+			.icon {background-color: $blue;}
+		}
+		&:hover {
+			color: #fff;
+			background-color: $red;
+		}
+	}
+}
+
+// expertArticle
+.expertArticle {
+	.result {
+		display: block;
+		@include ellipsis();
+		padding: 3% 8% 3% 4%;
+		@extend %iconBg;
+		background-position: 92% 75%;
+		&:hover {
+			color: #fff;
+			background-color: $green;
+			background-position: 92% 73%;
+		}
+	}
+}
+
+// qa
+.qa {
+	text-align: center;
+	h2 {text-align: left;}
+	a {
+		display: block;
+		color: #fff;
+		padding: 1em;
+		font-weight: bold;
+		font-size: 1.1em;
+		@extend %iconBg;
+		background-position: 76% 75%;
+		background-color: $green;
+		&:hover {
+			background-color: $red;
+			background-position: 76% 73%;
+		}
+	}
+	h5 {
+		color: $green;
+		font-size: 5em;
+	}
+}
+
+// Add links more links to the bottom of the page
+.moreList {
+	.result {
+		display: block;
+		padding: 2% 3%;
+		overflow: hidden;
+		h3 {
+			float: left;
+			margin: 0;
+		}
+		.star {
+			float: right;
+		}
+		&:hover {
+			background-color: $blue;
+			h3, .star .rtng {
+				color: #fff;
+			}
+		}
+	}
+}
+
+// -------------------------------- SUB PAGES ---------------------------------
+
+// Neighbor page
+.neighbor, .connections {
+	overflow: hidden;
+	a {display: block;}
+	.result {
+		float: left;
+		width: 33.33%;
+		text-align: center;
+		min-height: 150px;
+		.imgMask {
+			margin: 4% 0 0 0;
+			display: inline-block;
+    		float: none;
+		}
+		h4, p {
+			@include ellipsis();
+			padding: 1% 8% 0 8%;
+		}
+	}
+	a:hover {
+		background-color: lighten($blue, 10%);
+		h4, p, .star .rtng {color:#fff;}
+	}
+}
+
+// Connections page
+.connections {
+	.result {
+		display: block;
+		min-height: 300px;
+		position: relative;
+		padding: 2% 0 12% 0;
+		.merchantScore {
+			padding: 2% 6% 4% 6%;
+			background: none;
+			position: absolute;
+			bottom: 1%;
+			width: 100%;
+		}
+	}
+	.star {
+		margin: 4% 0 0 1.7em;
+		display: inline-block;
+	}
+}
+
+// Newsletter/products page
+.newsletter, .products {
+	input[type="text"], .inputSubmit {
+		float: left;
+		margin: -.6em 0 0 0;
+	}
+	input[type="text"] {
+		width: 100%;
+	}
+	.inputSubmit {
+		background-color: $blue;
+		border: 0;
+		padding: 0.78em;
+		position: absolute;
+		font-size: 1em;
+		color: #fff;
+		cursor: pointer;
+		&:hover {background-color: $red;}
+	}
+	.toolTip > .icon {top: 0;}
+	.toolTip.required:before {top:-4px;}
+	.result, .resultMain {
+		padding: 3%;
+		overflow: hidden;
+		clear: both;
+		h3:hover {color: $blue;}
+		p {padding: 1% 0 0 0;}
+		i {display: block; text-align: right;}
+		& > img {
+			float: left;
+			margin: 0 4% 0 0;
+			@include border-radius(50%);
+			overflow: hidden;
+		}
+		.social {margin:1% 0 0 0; float: right;}
+		&.more {
+			padding: 2%;
+			display: block;
+			&:hover {
+				background-color: $blue;
+				color: #fff;
+			}
+		}
+	}
+	.resultMain {
+		margin: 0 0 3% 0;
+		background-color: $blue;
+		color: #fff;
+		h3:hover {color: $green;}
+		a {color: #fff; &:hover {color: $green;}}
+	}
+	.readmore {
+		display: block;
+	}
+
+}
+
+@-moz-document url-prefix() { 
+	.newsletter, .products {
+		.inputSubmit {
+			padding: 0.7em;
+		}
+	}
+}
+
+// coupons
+.coupons, .promotions {
+	.result, .resultAdelo {
+		border: 2px dashed $green;
+		position: relative;
+		padding: 2% 3%;
+		margin: 0 0 2% 0;
+		&.more {
+			border: 0 none;
+			margin: 0;
+			h3 {padding: 0;}
+		}
+		.scissor {
+			width: 20px;
+			height: 15px;
+			position: absolute;
+			top: -10px;
+			right: 10px;
+			@extend %iconBg;
+			background-position: 0 100%;	
+		}
+		.couponImg {
+			// @include square-box($square-w:12%, $circle:true, $square-b: true, $border-size: 2px, $border-style: dashed #fff);
+			@include border-radius(50%);
+			float: left;
+			@extend %iconBg;
+			background-position: 43% -2311px;
+			background-color: $green;
+		}
+		.couponImg, .imgMask {
+			width:84px;
+			height:84px;
+			border: 2px dashed $green;
+			margin: 0 4% 2% 0;
+		}
+		.shareCoupon, .printCoupon {
+			float: right;
+			font-size: 1.2em;
+			line-height: 1.4em;
+			padding: .4em .6em;
+			& .icon {
+				width: 1.4em;
+				height: 1.4em;
+				@include border-radius(50%);
+				background-position: -132px -2352px;
+				background-color: #fff;	
+				float: left;		
+				margin: 0 .4em 0 0;
+			}
+			& span {
+				color: #fff;
+				display: block;
+				float: left;
+			}
+			&:hover {
+				background-color: $orange;
+			}
+		}
+		.shareCoupon {
+			background-color: $blue;
+		} 
+		.printCoupon {
+			background-color: $red;
+			& .icon {
+				background-position: -111px -2352px;
+			}
+		}
+		p, h3 {padding: 0 0 2% 0;}
+		i {
+			display: block;
+			clear: both;
+			text-align: right;
+			margin: 0 -3% 2% -3%;
+			padding: 0 3% 2% 0;
+			border-bottom: 2px dashed $green;
+		}
+		&:hover {
+			background-color: $green;
+			color: #fff;
+			border: 2px dashed #fff;
+			i {
+				border-bottom: 2px dashed #fff;
+			}
+			.couponImg, .imgMask {
+				background-color: $blue;
+				border: 2px dashed #fff;
+			}
+			&.more {
+				border: 0 none;
+				background-color: $soft-bg;
+			}
+		}
+	}
+	.resultAdelo {
+		@extend %nthBg;
+		border: 2px dashed $blue;
+		.couponImg, .imgMask {
+			background-color: $blue;
+			border: 2px dashed $blue;	
+		}
+		.shareCoupon {
+			background-color: $green;
+		}
+		i {
+			border-bottom: 2px dashed $blue;
+		}
+		&:hover {
+			background-color: $blue;
+			.couponImg {
+				background-color: $green;
+			}
+		}
+	}
+}
+.promotions {
+	.result .couponImg {
+		background-position: 43% -2247px;
+	}
+}
+
+// Map
+.map, .slippy_map {
+	position: relative;
+	overflow: hidden;
+	h2 { 
+		float: left;
+		padding: 0 1% 0 0;
+	}
+	.location, .myLocBtn, .startBtn {
+		float: left;
+		margin: -.5em 0 0 0;
+	}
+	.location {
+		width: 34%;
+		float: left;
+	}
+	.myLocBtn, .startBtn {
+		background-color: $blue;
+		border: 0;
+		padding: 0.69em;
+		font-size: 1em;
+		color: #fff;
+		cursor: pointer;
+		&:hover {background-color: $red;}
+	}
+	.myLocBtn {
+		background-color: $blue;
+	}
+}
+.myLocBtn, .startBtn, .getMyLocation {
+	background-color: $blue;
+	border: 0;
+	padding: 0.69em;
+	font-size: 1em;
+	color: #fff;
+	display: block;
+	float: left;
+	cursor: pointer;
+	&:hover {background-color: $red;}
+}
+.getMyLocation {
+	@extend %iconBg;
+	background-position: 0 36%;
+	padding: 1.39em 0;
+	width: 34px;
+	background-color: $green;
+	margin: 0 0 0 .5%;
+}
+
+// slippy_map
+.slippy_map {
+	width: 492px;
+	max-width:100%;
+	height: 456px;
+	clear: both;
+	.map {position: absolute;}
+	.location, .myLocBtn, .startBtn {
+		margin: 0;
+	}
+}
+
+// directions
+.directions {
+	.time, .distance {float: right; padding: .4em .6em; color: #fff; display: inline-block; background-color: $green;}
+	.distance { font-weight: bold; background-color: $blue;}
+	.leg {
+		overflow: hidden;
+		@extend %nthBg;
+		padding: .6em;
+		line-height: 2em;
+		img, span {
+			margin: 0 .8em 0 0;
+			display: block;
+			float: left;
+		}
+		img {position: absolute;}
+		.narrative {width: 74%; margin: 0;}
+		.distance {background-color: transparent; color:$gray; float: right; padding: 0;}
+	}
+	ol {
+		list-style: none;
+		counter-reset: my-badass-counter;
+		clear: both;
+		li:before {
+			content: counter(my-badass-counter) ".";
+			counter-increment: my-badass-counter;
+			height: 100%;
+		    line-height: 2em;
+		    float: left;
+		    font-weight: bold;
+		    text-align: center;
+		    width: 2.4em;
+		    padding: 0 0 0 5%;
+		}
+	}
+}
+
+// blog
+.blog {
+	.result {
+		padding: 2% 3%;
+		overflow: hidden;
+		line-height: 1.8em;
+		.social {
+			float: right;
+			margin: 0;
+		}
+		img, p, i {
+			margin: 1em 0 0 0;
+		}
+		img {
+			float: left;
+			clear: left;
+			width: 25%;
+			height: auto;
+			margin: 1% 2% 2% 0;
+		}
+		// br {
+		// 	display: none;
+		// }
+		i {
+			display: block;
+			text-align: right;
+			padding: 0 0 .5em 0;
+			border-bottom: 1px solid $gray-sub;
+			clear: both;
+		}
+		.bookmark, .comments {
+			float: left;
+			margin: .5em 0 0 0;
+			h4 {
+				float: left;
+			}
+			b, a {
+				display: block;
+				float: left;
+				padding: 0 .2em;
+			}
+		}
+		.comments {
+			float: right;
+		}
+	}
+	.writeReview {
+		border-top: 10px solid $gray;
+		padding: 2% 0 0 0;
+	}
+}
+.blog {
+	&.single {
+		.result {
+			img {
+				float: none;
+				clear: none;
+				width: auto;
+				height: auto;
+				max-width: 100%;
+			}
+		}
+		.articleBody {
+			margin: 2% 0 0 0;
+		}
+	}
+}
+
+// photos
+// .photos {
+// 	.photoBox {
+// 		// @include square-box($square-w:76%, $square-p:0 0 59% 0);
+// 		@include square-box($square-w:100%, $square-p:0 0 59% 0);
+// 		@include prefix($property:background-size, $value:contain);
+// 		background-position: center center;
+// 		background-repeat: no-repeat;
+// 		background-color: lighten($gray, 60%);
+// 		float: left;
+// 		margin: 0 0 2% 0;
+// 		h4 {
+// 			background-color: $blue;
+// 			color: #fff;
+// 			padding: 1% 2%;
+// 		}
+// 	}
+// 	.arrowImg {
+// 		width:0; 
+// 	}
+// 	.thumbMask {
+// 		@include prefix($property:background-size, $value:cover);
+// 		@include square-box($square-w:10%, $square-p:0 0 8% 0);
+// 		margin: 0 1% 1% 0;
+// 		float: left;
+// 		border: 4px solid $sub-bar;
+// 		background-position: center center;
+// 		background-repeat: no-repeat;
+// 		background-color: lighten($gray, 50%);
+// 		cursor: pointer;
+// 		& > img {
+// 			opacity: 0;
+// 			width: 100%;
+// 		}
+// 		&:hover, &.active {
+// 			border: 4px solid $blue;
+// 		}
+// 	}
+// }
+
+// photo block
+.photos, .photo {
+	position: relative;
+}
+.photo {
+	.block {
+		max-width: 100%;
+		float: left;
+		margin: 0 3% 3% 0;
+		img {
+			outline: 0; 
+			max-width: 100%; 
+			width: auto;
+			height: auto;
+			margin: 0;
+		}
+	}
+	p, a.pictureGallery {clear:left; display: block; float: left; width:40%; padding: 0 0 2% 0;}
+}
+.block {
+	background-color: #fff;
+	display: block;
+	@include box-shadow(0 0 10px rgba(0,0,0,.2));
+	color: $gray;
+	img {
+		width: 100%;
+		margin: 0;
+		display: block;
+	}
+	object {
+		width: 100%;
+		height: 170px;
+		display: block;
+	}
+	h4, p {margin: 5%; font-size: 90%; word-wrap: break-word;}
+	p {
+		margin: 0 5% 5% 5%;
+	}
+	&:hover {
+		color: #fff;
+		background-color: $blue;
+		a {
+			color: #fff;
+			&:hover {text-decoration: underline;}
+		}
+	}
+	
+}
+span.block {
+	&:hover {
+		color: $gray;
+		background-color: #fff;
+	}
+}
+
+// yext tabs
+.enhancedLists {
+	margin: 0 0 1.2em 0;
+	font-size: 1em;
+	overflow: hidden;
+	li {
+		@extend %iconBg;
+		background-position: 100% 100%;
+		display: block;
+		cursor: pointer;
+	    float: left;
+	    font-size: 100%;
+	    margin: 0 10px 0 0;
+	    padding: 2px 0 3px 23px;
+	    &.PRODUCTS {background-position: -129px -2299px;}
+		&.BIOS {background-position: -129px -2217px}
+		&.MENU {background-position: -129px -2272px;}
+		&.EVENTS {background-position: -129px -2166px;}
+	}
+}

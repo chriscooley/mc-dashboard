@@ -1,0 +1,215 @@
+%sub-spacing {
+	& > div {margin: 0 0 1.2em 0;}
+}
+
+// overlay
+.overlay {
+	height: 100%;
+	z-index: 99999;
+	.close {
+	    margin: 0;
+	    right: 0;
+	}
+	.overlayBody  {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		overflow: scroll;
+		border: 0 none;
+		#signup-review {
+			-webkit-overflow-scrolling: touch;
+		}
+	}
+}
+
+// col2 col3
+.home, .col1, .col1-hub, .col2-srp, .col2, .col3 {
+	.mainUiBar, .subUiBar, .asideUiBar, .pageContent, .header, .footer, .category, .comp, .follow {width:100%; margin:0;}
+	.mainSection, .subSection, .asideSection {width:92%; margin:0 4%; display:block; float:none; clear:both;}
+	.mainSection {overflow: hidden;}
+}
+// header
+.header {
+	position: relative;
+	& .searchBox {
+		overflow: hidden;
+		display: block;
+		width: 30px;
+		padding: 30px 0 0 0;
+		height: 0;
+		position: absolute;
+		@extend %iconBg;
+		background-position: 50% -168px;
+		background-color: $blue;
+		right: 4%;
+		top:.5em;
+		@include border-radius(50%);
+		.close {
+			right: 4%;
+			top: 121%;
+		}
+		&.open {
+			width: 100%;
+			height: auto;
+			padding: 2% 4%;
+			margin: 0 0 2% 0;
+			position: relative;
+			background: none;
+			overflow: visible;
+			@include border-radius(0);
+			right: 0;
+			top: 0;
+			label {
+			    font-size: .9em;
+			    padding: .8em 0;
+			    width: 10%;
+			}
+			input[type="text"] {
+			    width: 38%;
+			}
+		}
+	}
+	.logo {
+	    float: none;
+	    margin: .5em auto;
+	    width: 70%;
+	    img {
+	    	height: 38px;
+	    	width: auto;
+	    	margin: 0 auto;
+	    	display: block;
+	    }
+	}
+	.socialMC {
+	    display: none;
+	}
+}
+.topNav {
+	.login {
+		float: none;
+	}
+}
+
+.subUiBar {
+	.header {
+		@extend %iconBg;
+		@include square-box($square-w:28px, $square-p:24px 0 3px 0);
+		background-position: 50% 90%;
+		position: absolute;
+		margin: -3.3em 0 0 0;
+		left: 4%;
+		overflow: hidden;
+		&.open {
+			width: 100%;
+			height: auto;
+			padding: 4%;
+			background: none;
+			position: relative;
+			left: 0;
+			top:0;
+			margin: 0;
+			overflow: visible;
+			.subNav {
+				border: 0 none;
+				position: relative;
+				top: 0;
+			}
+			a, span {
+				display: block;
+				font-size: 1.4em;
+				width: 100%;
+				float: none;
+			}
+			.login {
+				width: 100%;
+			}
+		}
+		.close {
+			left: 4%;
+			top: -3.4em;
+		}
+	}
+}
+
+// social
+.social {
+	&.fb {width:96px;}
+    &.gp {width:76px;}
+    &.tw {width:92px;}
+}
+
+.footer {
+	.category {
+		.nav, .nav:first-child {
+			width: 100%;
+		}
+	}
+	.comp {
+		padding: 2% 0;
+		.compInfo, .nav {
+			width: 92%;
+			margin: 1% 4%;
+			padding: 0;
+			text-align: center;
+		}
+		.nav{
+			a {
+				width: auto;
+				display: inline;
+				float: none;
+			}
+		}
+		.compInfo {
+			.logo {
+				display: block;
+			    float: none;
+			    margin: 0 auto 2%;
+			    width: 60%;
+			}
+		}
+	}
+}
+
+.userInput, .writeReview {
+	.toolTip {
+		width: 100%;
+	}
+}
+
+.toolTip {
+	.toolBody {
+		width: 120px;
+		left: auto;
+		top: 2.5em;
+		right:0;
+		&:before {
+			background-position: 100% -84px;
+		    height: 8px;
+		    left: 104px;
+		    top: -7px;
+		}
+	}
+	&.tError {
+		.toolBody {
+			&:before {
+				background-position: 100% -101px;
+			}
+		}
+	}
+}
+
+.adFootM {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	display: block;
+	text-align: center;
+	background-color: $gray-sub;
+	z-index: 999999999;
+	.adW {
+		margin: 0 auto;
+		display: block;
+	}
+}

@@ -1,0 +1,30 @@
+// srp result
+.srp {
+	.result {
+		width: 100%;
+		&.top{
+			// & > a > h3 {width: 100%;}
+			.title {
+				width: 100%;
+				& > h3 {
+					width:52%;
+				}
+				.star {margin: .8em 3% 0 1.7em;}
+			}
+		}
+		 .srpHeader .title {
+			width: 100%;
+			&:before {
+				width: 8%;
+			}
+			& > h3 {
+				width:52%;
+			}
+			.star {margin: .8em 3% 0 1.7em;}
+		}
+		.merchantScore, .read {display: none;}
+		// .imgMask {float:left;width: auto; height: auto;}
+		.directions {margin: 2%; width: 96%;}
+		.phone {margin: 8% 0;}
+	}
+}

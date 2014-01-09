@@ -1,0 +1,19 @@
+.col2 .mainSection > div.expertsArticle {
+	margin: 2.875em 0 1.875em 0;
+	line-height: 1.6em;
+	.author {display: block; margin: 2% 0;}
+	h1 {
+		margin: 0 0 3% 0;
+	}
+	h3 {
+		margin: 2% 0 0 0;
+	}
+	.social {
+	    float: right;
+	    margin: 0 0 2%;
+	}
+}
+.comments .no-result {
+	@extend %nthBg;
+	padding: 2%;
+}

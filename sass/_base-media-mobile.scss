@@ -1,0 +1,9 @@
+// mobile turn off
+%mOff {display:none;}
+
+// input fix
+input[type="text"], input[type="number"], input[type="email"], input[type="password"], textarea {
+	-webkit-border-radius:0;
+	font-size: .9em;
+	padding: .4em;
+}

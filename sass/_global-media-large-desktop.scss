@@ -1,0 +1,29 @@
+%gw {width:1280px;}
+.pageContent {
+	@extend %gw;
+}
+.col2 {
+	.mainSection {
+		width:72%;
+	}
+	.subSection {
+		width:24%;
+	}
+}
+.col3 {
+	.mainSection {
+		width:56%;
+		margin: 0 0 0 3%;
+	}
+	.subSection {
+		width:24%;
+	}
+	.asideSection {
+		width:14%;
+	}
+}
+.social {
+	float:right; 
+	margin: 0;
+	&.fb {clear: none;}
+}

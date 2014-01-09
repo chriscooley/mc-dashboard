@@ -1,0 +1,262 @@
+// Global Elements | Remove if integrated with global structure 
+@import "var";
+@import "mixins";
+@import "base";
+
+html, body {height:100%;}
+
+// UI signup
+input[type="text"], input[type="number"], input[type="email"], input[type="password"], textarea {margin: 2% 0 0 0; display: inline-block;}
+.error {
+	position: relative;
+	input[type="text"], input[type="number"], input[type="email"], input[type="password"], textarea {
+		border: 5px solid $red;
+	}
+	span {
+	    bottom: 4px;
+	    font-size: 80%;
+	    position: absolute;
+	    right: 6px;
+	    z-index: 99;
+	    color: $red;
+	}
+}
+.btn {
+ 	background-color:#39A7DE;
+ 	display:block;
+ 	padding:.4em .8em;
+ 	text-decoration:none;
+ 	float:right;
+ 	color:#fff;
+ 	border:0 none;
+ 	cursor: pointer;;
+	&.signIn {
+		background-color: $gray-sub;
+		&:hover {
+			background-color:$red;
+			color:#fff;
+		}
+	}
+	&:hover {
+		background-color:#F15B50;
+		color:#fff;
+	}
+}
+#buttonCancel.btn {
+	background-color: $gray;
+}
+.mainBox {
+	width: 96%;
+	max-width: 560px;
+	margin: 0 auto;
+	float: none;
+	clear: both;
+	overflow: hidden;
+	text-align: center;
+	@extend %clear;
+	&.login {
+		width: 80%;
+		margin: 10% auto;
+	}
+	h1 {
+		padding: .4em;
+		font-size: 2em;
+	}
+	h3 {
+		display: inline-block;
+		span {
+			font-size:140%;
+			color:#39A7DE;
+			margin:0 .4em;
+		}
+	}
+	.yes {
+		margin:8% 0 0 0;
+		float:right;
+		width:28%;
+	}
+	&.merchant {
+		h3 {text-align: left; display: block;}
+		#name, #address, #fname, #email, #password {
+		    float: left;
+		    width: 49%;
+		}
+		#telephone, #zip, #lname, #email2, #confirm_password {
+		    float: right;
+		    width: 49%;
+		}
+	}
+	select {
+		border: 5px solid #E5E5E5;
+		color: #757575;
+		&:focus {border: 5px solid $green;}
+	}
+	&.iframePhone {
+		text-align: left;
+		.signUpForm {
+			width: 72%;
+		}
+	}
+}
+.maxCharBox {
+    display: block;
+    font-size: 0.8em;
+    margin: 0;
+    text-align: right;
+}
+.redBtn {
+	font-size:1.6em;
+	font-weight: bold;
+	margin: 2% 0 0 0;
+	background-color:#A0CF6E;
+	width:100%;
+	border:0 none;
+	color:#fff;
+	cursor:pointer;
+	padding:.4em;
+	display: block;
+	float: left;
+	-webkit-appearance: none;
+	&:hover {
+		background-color:#F15B50;
+		color:#fff;
+	}
+}
+.recaptchaWrap {
+	width:316px;
+	float:left;
+}
+.remberMe {
+	display: inline-block;
+    margin: 3% 0 1%;
+}
+
+.bizInfoWrap {
+	overflow: hidden;
+}
+#category_wrap {padding: 0;}
+
+#category_manual {
+	overflow: hidden;
+	margin: 2% 0 0 0;
+	text-align: left;
+	h3 {
+		margin: 0 0 2% 0;
+	}
+}
+.signUpForm {overflow: hidden;}
+.certifyBox {
+	font-size: .8em;
+	padding: 1% 0;
+	p {line-height: 1.8em;}
+}
+.terms {padding: 2% 0 5% 0; font-size: .75em;}
+.termsInPage, .whatWeDoBox {display: none;}
+
+
+.inputWrapper {
+	label {
+		display: none;
+	}
+}
+#content {
+	h1 {
+		font-size: 1.5em;
+	}
+}
+.congratulations {
+	#content {
+		h1 {
+			font-size: 2em;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+.signUpForm {
+	width: 49%;
+	float: left;
+	h4 {text-align: left;}
+	&.step2 {
+		float: right;
+	}
+	table {margin: 2% 0 0 0;}
+	table tr td {padding: 3px;}
+	table tr {
+		background-color: $sub-bar;
+		&:nth-child(2n+1) {
+			background-color: $soft-bg;
+		}
+	}
+}
+#category_manual h3 {display: none;}
+.certifyBox {
+	float: left;
+	width: 100%;
+}
+.small {
+	display: block;
+	float: left;
+	width: 100%;
+	font-size: 8px;
+	padding: .4em;
+}
+.merchantNameListing strong{color: $blue;}
+.alert {
+	font-size: 10px;
+	color: $red;
+}
+#divCheckPasswordMatch, .errorDesc, #mcNotifier ul li {
+	color: $red;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    display: block;
+}
+#submitLink {
+	margin: 0;
+}
+.certifyBox .errorDesc, #mcNotifier ul li {
+    font-size: 1em;
+    text-align: center;
+}
+.signUpMerchantName {
+	text-align: left;
+	p span {display: block;}
+}
+
+@media only screen and (max-device-width: 740px) {
+	.mainBox {
+		overflow-y:scroll;
+		height: 100%;
+		padding: 0 0 20% 0;
+		&.login {
+			width: 90%;
+			margin: 0 5%;
+		}
+		h3 {
+			span {display: none;}
+		}
+		.yes {
+			margin:2% 0 0 0;
+			float:right;
+			width:100%;
+		}
+		.signUpForm {
+			width: 100%;
+		}
+		&.merchant {
+			#name, #address, #fname, #email, #password, #telephone, #zip, #lname, #email2, #confirm_password {
+			    float: left;
+			    width: 100%;
+			}
+		}
+	}
+	.btn {
+		float: left;
+	}
+	.recaptchaWrap {
+		margin: 0 -3%;
+	}
+}

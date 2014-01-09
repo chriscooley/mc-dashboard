@@ -1,0 +1,111 @@
+/*          uuuuuuuuuuuuuuuuuuuu
+          u" uuuuuuuuuuuuuuuuuu "u
+        u" u$$$$$$$$$$$$$$$$$$$$u "u
+      u" u$$$$$$$$$$$$$$$$$$$$$$$$u "u
+    u" u$$$$$$$$$$$$$$$$$$$$$$$$$$$$u "u
+  u" u$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$u "u
+u" u$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$u "u
+$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $
+$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $
+$ $$$" ... "$...  ...$" ... "$$$  ... "$$$ $
+$ $$$u `"$$$$$$$  $$$  $$$$$  $$  $$$  $$$ $
+$ $$$$$$uu "$$$$  $$$  $$$$$  $$  """ u$$$ $
+$ $$$""$$$  $$$$  $$$u "$$$" u$$  $$$$$$$$ $
+$ $$$$....,$$$$$..$$$$$....,$$$$..$$$$$$$$ $
+$ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ $
+"u "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" u"
+  "u "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$" u"
+    "u "$$$$$$$$$$$$$$$$$$$$$$$$$$$$" u"
+      "u "$$$$$$$$$$$$$$$$$$$$$$$$" u"
+        "u "$$$$$$$$$$$$$$$$$$$$" u"
+          "u """""""""""""""""" u"
+            """""""""""""""""""" 
+STOP DONT EDIT THIS FILE THIS CEE FILE IS COMPILED FROM 
+A GROUP OF SCSS FILES ANY CHANGES MADE HERE WILL BE OVERRIDEN 
+WHEN THE SCSS FILES ARE COMPILED */
+
+// Global Elements 
+@import "var";
+@import "mixins";
+@import "base";
+
+// global UI
+@import "global";
+
+// listings UI
+@import "listings";
+@import "related-business";
+@import "listng-widgets";
+
+// home
+@import "home";
+
+// srp
+@import "srp";
+
+// Join 
+@import "join";
+
+// Directory
+@import "directory";
+
+// HUB
+@import "hub";
+
+// experts-article.
+@import "experts-article";
+
+// 404 / 503
+@import "404";
+
+// Media Querys
+@media only screen and (min-width: 1280px) {
+	// global UI
+	@import "global-media-large-desktop";
+
+	// listings UI
+	@import "listing-media-large-desktop";
+
+	// join UI
+	@import "join-media-large";
+
+	// srp
+	@import "srp-media-large-desktop"; 
+
+	// hub
+	@import "hub-media-large-desktop"; 
+}
+
+@media only screen and (max-width: $start-width) {
+	@import "global-media-start-width";
+}
+
+@media only screen and (max-width: 740px) {
+	// base
+	@import "base-media-mobile";
+	
+	// global UI
+	@import "global-media-mobile";
+
+	// listings UI
+	@import "listing-media-mobile";
+
+	// home
+	@import "home-media-mobile";
+
+	// srp-media-mobile
+	@import "srp-media-mobile";
+
+	// HUB
+	@import "hub-media-mobile";
+}
+
+@media print {
+ 	.mainUiBar, .subUiBar, .bread, .subSection, .asideSection, .footer, .nav.tabs, .ad, .social, .imgMask, .rating, .toolTip {display: none !important;}
+ 	.col2-srp .mainSection, .col2 .mainSection, .col3 .mainSection {font-family: arial,sans-serif; width: 100%;}
+
+ 	.single-print {
+ 		.mainSection div, .mainSection a, .mainSection nav, .mainSection .coupons .result, .mainSection .coupons .resultAdelo {display: none;}
+ 		.mainSection, .mainSection .coupons, .mainSection .coupons .result.print, .mainSection .coupons .resultAdelo.print, .mainSection .promotions, .mainSection .promotions .result.print, .mainSection .promotions .resultAdelo.print, .mainSection .result.print a, .mainSection .resultAdelo.print a {margin:0;display: block;}
+ 	}
+}

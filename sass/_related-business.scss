@@ -1,0 +1,63 @@
+.relatedBusiness {
+	.result {
+		overflow: hidden;
+		display: block;
+		padding: 3%;
+		.imgMask {
+			height: 50px;
+			width: 50px;
+			margin: 0 2% 0 0;
+			background-color: $blue;
+			background-color: $blue;
+			background-color: $blue;
+		}
+		h3, span{
+			@include ellipsis;
+		}
+		h3 {
+			padding: 0 0 1% 0;
+			color: $blue;
+		}
+		.star {
+			float: right;
+			margin: 0 0 0 1.5em;
+			display: block;
+		}
+		& > span {
+			float: left;
+			margin: .1em 0 1% 0;
+			display: block;
+			width: 110px;
+		}
+		.location {
+			width: 70%;
+		}
+		.phone {
+			color: $red;
+		}
+		&:hover {
+			background: $blue;
+			h3, & > span, .star .rtng {color: #fff;}
+			&:hover .imgMask {
+				background-color: $green;
+			}
+		}
+	}
+}
+
+.asideSection, .col2 .subSection {
+	.relatedBusiness {
+		.result {
+			img {
+				@extend %imgMask;
+				height: 46px;
+				width: 46px;
+			}
+			h3 {
+				font-size: 96%;
+				padding: 4% 4% 0 0;
+			}
+			& > span {width: auto;}
+		}
+	}
+}

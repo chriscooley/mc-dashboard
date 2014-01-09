@@ -1,0 +1,27 @@
+// srp result
+.srp {
+	.result {
+		&.top {
+			.title {
+				& > h3 {
+					width: 74%;
+				}
+			}
+		}
+		.title {
+			& > h3 {
+				width: 78%;
+			}
+		}
+	}
+}
+
+// srp map
+.col1-hub, .col2-srp {
+	.srpMap {
+		.map {
+			height: 534px; 
+			width: 534px;
+		}
+	}
+}

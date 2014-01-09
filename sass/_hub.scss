@@ -1,0 +1,230 @@
+.col1-hub {
+	.mainSection {
+		& > h2 {
+			margin: 0 0 1% 0;
+		}
+	}
+	.hubMain {
+		float: left;
+		width: 54%;
+		padding: 2%;
+		background-color: $soft-bg;
+		h2, p {
+			margin: 0 0 2% 0;
+		}
+		// & > a {
+		// 	float: left;
+		// 	display: block;
+		// 	width: 50%;
+		// 	padding: 0 4% 0 0;
+		// } 
+	}
+	.srpMap {
+		width: 42%;
+		float: right;
+	}
+	.hubResults {
+		position: relative;
+		overflow: hidden;
+		clear: both;
+		list-style: none;
+		.result {
+			padding: 0;
+			position: relative;
+			.merchantScore {
+				position: absolute;
+				right: 0;
+				font-size: 40%;
+				background-color: transparent;
+				h3 {
+					float: left;
+					height: 18px;
+					width: 4.6em
+				}
+				h5 {
+					width: 1.8em;
+					float: right;
+				}
+			}
+			.imgMask {
+				float: none;
+    			margin: 22% auto;
+			}
+			img {
+				max-width: 100%;
+				margin: 0 auto;
+				display: block;
+				@include border-radius(0);
+			}
+			& > a > h2 , h3 {
+				padding: 3% 6%;
+				color: #fff;
+				margin: 0;
+				background-color: $blue;				
+			}
+			& > a:hover  {
+				h2, h3 {
+					background-color: $green;
+				}
+			}
+			&.best {
+				& > a > h2 , h3 {
+					background-color: $green;				
+				}
+				& > a:hover  {
+					h2, h3 {
+						background-color: $red;
+					}
+				}
+			}
+			h2 {
+				.icon {
+					background-position: 50% -1385px;
+				    float: left;
+				    height: 1.2em;
+				    width: 1.5em;
+				}
+			}
+			.rating, .phone {
+				padding: 3% 6% 0 6%;
+			}
+			.blurb, .directions {
+				padding: 3% 6%;
+			}
+			.blurb {
+				background-color: lighten( $gray, 56% );
+				display: block;
+				color: $gray;
+				&:hover {
+					color: $red;
+				}
+			}
+			.rating {
+				a {
+					margin: 0 0 0 3%;
+				}
+			}
+			.phone {
+				font-size: 1.8em;
+			}
+			.directions {
+				line-height: 1.4em;
+			}
+			.tempAd {
+				min-height: 180px;
+				padding: 5% 0;
+				text-align: center;
+				color: #fff;
+				font-weight: bold;
+				font-size: 2em;
+			}
+		}
+	}
+	.hub-tab {
+		width: 54%;
+		#nav_overview, #nav_map, a {width: 20%;}
+		&:after {clear: none;}
+	}
+}
+
+.col1-hub, .col2-srp {
+	.hero {
+		width: 100%;
+		background-color: $gray;
+		color: #fff;
+		padding: 2% 3%;
+		margin: 2% 0 0 0;
+		float: right;
+		text-align: left;
+		cursor: pointer;
+		h2 {color: $blue; font-size: 2.4em; margin: 0;}
+		h4 {color:#fff; font-size: 1.3em; font-weight: normal; small {font-size: 70%; display: block;}}
+		.heroImg {
+			@include border-radius(50%);
+			overflow: hidden;
+			background-color: $blue;
+			float: left;
+			margin: 0 3% 0 0;
+			@include square-box($square-w:20%);
+			.icon {
+				background-position: 1px -522px;
+			    height: 70px;
+			    margin: 20% auto;
+			    width: 70px;
+			}
+		}
+		&:hover {
+			background-color: $blue;
+			h2 {color: #fff;}
+			h4 {color: $gray;}
+			.heroImg {background-color: $gray;}
+		}
+	}
+
+	.overlayInfo {
+		position: fixed;
+		z-index: 9999999;
+		top: 0;
+		left: 0;
+		right: 0;
+		display: none;
+		.overlayBody {
+			max-width: 600px;
+			@extend %clear;
+			width: 60%;
+			margin: 0 auto;
+			z-index: 9999;
+			position: relative;
+			padding: 1%;
+			background-color: #fff;
+			@include box-shadow(0 0 20px rgba(0,0,0,.45));
+			textarea {height: 60px;}
+			h1 {
+				color:$blue;
+				line-height: 0.8em;
+				padding: 0.4em 0;
+				small {
+					font-size: 80%;
+				}
+			}
+			.toolTip {
+				width: 49%;
+				float: left;
+				margin: 1% 2% 0 0;
+				&:nth-child(2n+1) {
+					margin: 1% 0 0 0;
+				}
+			}
+			.btn {
+				padding: .5em;
+				font-size: 1em;
+				font-weight: bold;
+				color: #fff;
+				background-color: $blue;
+				border: 0 none;
+				cursor: pointer;
+				-webkit-appearance:none;
+				-moz-appearance:none;
+				-ms-appearance:none;
+				-o-appearance:none;
+				appearance:none;
+				@include border-radius(0);
+				&:hover {
+					color: #fff;
+					background-color: $red;
+				}
+			}
+			.btn {
+				float: right;
+				text-transform:uppercase;
+				margin: 2% 0 0 0;
+				&.cancel {
+					background-color: lighten($gray, 40%);
+					&:hover {
+						background-color: $red;
+					}
+				}
+			}
+		}
+	}
+}

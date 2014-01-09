@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=320px; maximum-scale=1; user-scalable=no" name="viewport" />
+	<title>My Dashboard | Merchant Circle</title>
+    <link type="text/css" rel="stylesheet" href="stylesheets/mc-master-dash.css" />
+</head>
+<body class="dashboard">
+
+	<header class="dashHeader">
+		<a href="#" class="btn"><div class="icon"></div>View My Listing &#9658;</a>
+		<div style="background-image:url('http://media.merchantcircle.com/cat/161/0.jpg');" class="imgMask">
+			<div class="amountDone">
+			    <div class="pie"></div>
+			    <div class="pieBg"></div>
+				<div class="accountOver">
+					<div style="background-image:url('http://media.merchantcircle.com/cat/161/0.jpg');" class="imgMask">
+						<a href="#" class="change">change</a>
+					</div>
+					<h4>Name Here</h4>
+					<p>email@email.com</p>
+					<div class="footer">
+						<a href="#" class="btn logOut">Log Out</a>
+						<div class="btn">My Acount</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<ul class="dashNav">
+		<li class="tab logo hide">
+			<div class="icon lo"></div>
+		</li>
+		<li class="hideMenu">
+			<div class="icon"></div>
+		</li>
+		<li class="tab">
+			<div class="icon ml"></div>
+			My Listing
+			<ul class="menu">
+				<li><h2>My Listing</h2></li>
+				<li><div class="icon"></div>Business Info</li>
+				<li><div class="icon"></div>My Reviews & Messages</li>
+				<li><div class="icon"></div>My Social Media</li>
+			</ul>
+		</li>
+		<li class="tab">
+			<div class="icon av"></div>
+			Advertise
+			<ul class="menu">
+				<li><h2>Advertise</h2></li>
+				<li><div class="bubble">2</div><div class="icon"></div>Store</li>
+				<li><div class="bubble">2</div><div class="icon"></div>MC Membership</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Hero Ads</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Local Marketer</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Advertise on Google</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Premium Cities</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Instant Website</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Local Directory</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Coupon Blast</li>
+			</ul>
+		</li>
+		<li class="tab">
+			<div class="icon pb"><span class="bubble">8</span></div>		
+			Publish
+			<ul class="menu">
+				<li><h2>Publish</h2></li>
+				<li><div class="bubble">2</div><div class="icon"></div>Blogs</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Coupons</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Photos $ Videos</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Sales / Promotions</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Newsletters</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Questions / Answers</li>
+			</ul>
+		</li>
+		<li class="tab">
+			<div class="icon pr"></div>
+			Performance
+			<ul class="menu">
+				<li><h2>Performance</h2></li>
+				<li><div class="bubble">2</div><div class="icon"></div>Listing Performance</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Advertising Performance</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Content Performance</li>
+			</ul>
+		</li>
+		<li class="tab">
+			<div class="icon nw"><span class="bubble">8</span></div>		
+			Network
+			<ul class="menu">
+				<li><h2>Network</h2></li>
+				<li><div class="bubble">2</div><div class="icon"></div>Connect With Merchants</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Connect With Consumers</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Manage Connections</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Received / Sent Requests</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Inbox</li>
+			</ul>
+		</li>
+		<li class="tab hide">
+			<div class="icon ha"></div>
+			Hero Ads
+		</li>
+		<li class="tab hide">
+			<div class="icon lm"></div>
+			Local Marketer
+		</li>
+		<li class="tab">
+			<div class="icon ma"></div>
+			My Account
+			<ul class="menu">
+				<li><h2>Network</h2></li>
+				<li><div class="bubble">2</div><div class="icon"></div>Contact Info</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Login Info</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Manage Services</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Email Marketing</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Billing Activity</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Billing Info</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Neighbor Profile</li>
+				<li><div class="bubble">2</div><div class="icon"></div>Remove My Listing</li>
+			</ul>
+		</li>
+	</ul>
+
+	<section class="dashMain">
+		
+		<!-- main content blocks here -->
+		
+	</section>
+
+<script src="js/jquery.mini.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {
+    var body = $('body');
+    var all = $('.dashNav li');
+    var hideMenu = $('.hideMenu');
+
+    jQuery('body').on('click mouseenter mouseleave', '.dashNav li', function(e) {
+    	var eventType = e.type;
+    	var thisLi = $(this);
+
+    	// Click
+		if (eventType == 'click') {
+					
+			if ($(this).is('.hideMenu')) {
+				if (!$(this).is('.closeMenu')) {
+					body.removeClass('open click');				
+					thisLi.addClass('closeMenu');
+				}
+				else {
+					body.addClass('click');				
+					thisLi.removeClass('closeMenu');
+				}
+			}
+			else if ($(this).is('.hide')) {
+				body.removeClass('open click');
+				all.removeClass('active');
+				hideMenu.hide();
+			}
+			else {
+				thisLi.addClass('active').siblings().removeClass('active');
+				body.addClass('open click');
+				hideMenu.show().removeClass('closeMenu');
+			}
+
+		}
+
+		// Hover
+		if(thisLi.children('ul').length && !thisLi.hasClass('.hide')) {
+			if (eventType == 'mouseenter') {
+				body.addClass('open');
+			}
+			if (eventType == 'mouseleave') {
+				body.removeClass('open');
+			}
+		}
+	});
+
+
+});
+</script>
+</body>
+</html>

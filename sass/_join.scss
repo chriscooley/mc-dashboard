@@ -1,0 +1,440 @@
+// main Join UI
+%joinBox {
+	width: 28%;
+	margin: 2% 2% 2% 0;
+	float: left;
+	background-color: lighten($sub-bar, 5%);
+	position: relative;
+	text-align: center;
+	min-height: 520px;
+	select, input[type="text"], input[type="number"], input[type="email"], input[type="password"], textarea, .subTool {
+		width: 86%;
+		float: right;
+		padding:.4em .6em;
+	}
+	textarea {
+		min-height:84px;
+	}
+	h2 {
+		overflow: hidden;
+		line-height: 2.6em;
+		display: inline-block;
+		.icon {
+			width: 1.8em;
+			height: 1.8em;
+			margin: .4em .6em;
+			float: left;
+			@include border-radius(50%);
+		}
+		p {
+		    font-size: 80%;
+		    font-weight: normal;
+		    line-height: 1em;
+		    text-align: left;
+		    margin: -10px 0 10px 52px;
+		}
+	}
+	input[type="checkbox"], label {
+		font-size: .8em;
+		float: left;
+	}
+	input[type="checkbox"] {
+		clear: left;
+		margin: 0 1% 2% 2%;
+	}
+	.toolTip {
+		width: 84%;
+		margin: 2% 5% 0 5%;
+		&.required:before {left:1.45em;}
+		.icon {
+			right: -28px;
+		}
+		.toolBody {
+			text-align: left;
+		}
+	}
+	.default {
+		border-top:.1px solid $gray-sub; 
+		display: block;
+	    font-size: 10em;
+	    font-weight: bold;
+	    padding: 45% 0;
+	    color: $gray-sub;
+	}
+	.inputWrap {
+		border-top:1px solid $gray; 
+		display: none;
+		text-align: left;
+		padding: 2% 0;
+		@extend %clear;
+		& > h3, & > i {padding: 1% 3%; text-align: center;}
+		& > h3 {
+			font-size: 140%;
+		}
+		& > i {
+			padding-top: 0;
+			display: block;
+		}
+	}
+	&.active {
+		width: 40%;
+		padding: 0 0 3.4em 0;
+		// .inputWrap {display: block;}
+		.default {display: none;}
+	}
+	.point {
+		@extend %iconBg;
+		@include square-box ($square-w:2.7em);
+		position: absolute;
+		float: left;
+		&:after {
+			@extend %iconBg;
+			background-position: -139px -1762px;
+			content:"";
+			height: 10px;
+			width: 10px;
+			display: none;
+			position: absolute;
+			right: -8px;
+			top: 30%;
+		}
+		&.bn {background-position: 0 -998px;}
+		&.bp {background-position: 0 -1030px;}
+		&.be {background-position: 0 -1062px;}
+		&.ba {background-position: 0 -1091px;}
+		&.bl {background-position: 0 -1122px;}
+		&.bc {background-position: 0 -1153px;}
+		&.un {background-position: 0 -1183px;}
+		&.ue {background-position: 0 -1214px;}
+		&.uce{background-position: 0 -878px;}
+		&.ul {background-position: 0 -1122px;}
+		&.up {background-position: 0 -1245px;}
+		&.cp {background-position: 0 -1277px;}
+
+		&.ab {background-position: 0 -1378px;}
+		&.aw {background-position: 0 -1414px;}
+		&.ah {background-position: 0 -1449px;}
+		&.ac {background-position: 0 -1487px;}
+		&.ahl{background-position: 0 -1552px;}
+		&.ad {background-position: 0 -1519px;}
+		&.ae {background-position: 0 -1590px;}
+		&.ap {background-position: 0 -1624px;}
+
+		&.afb {background-position: 0 -794px;}
+		&.atw {background-position: 0 -822px;}
+		&.agp {background-position: 0 -850px;}
+		&.ain {background-position: 0 -878px;}
+	}
+	.focus {
+		.point {
+			background-color: $blue;
+			&:after {
+				display: block;
+				background-position: -139px -1762px;
+			}
+			&.bn {background-position: 100% -998px;}
+			&.bp {background-position: 100% -1030px;}
+			&.be {background-position: 100% -1062px;}
+			&.ba {background-position: 100% -1091px;}
+			&.bl {background-position: 100% -1122px;}
+			&.bc {background-position: 100% -1153px;}
+			&.un {background-position: 100% -1183px;}
+			&.ue {background-position: 100% -1214px;}
+			&.uce{background-position: 100% -878px;}
+			&.ul {background-position: 100% -1122px;}
+			&.up {background-position: 100% -1245px;}
+			&.cp {background-position: 100% -1277px;}
+
+			&.ab {background-position: 100% -1378px;}
+			&.aw {background-position: 100% -1414px;}
+			&.ah {background-position: 100% -1449px;}
+			&.ac {background-position: 100% -1487px;}
+			&.ahl {background-position: 100% -1552px;}
+			&.ad {background-position: 100% -1519px;}
+			&.ae {background-position: 100% -1590px;}
+			&.ap {background-position: 100% -1624px;}
+
+			&.afb {background-position: 0 -686px;}
+			&.atw {background-position: 0 -713px;}
+			&.agp {background-position: 0 -740px;}
+			&.ain {background-position: 0 -768px;}
+		}
+	}
+	.tError {
+		.point {
+			background-color: $red;
+			&:after {
+				display: block;
+				background-position: 0 -2149px;
+			}
+			&.bn {background-position: 100% -998px;}
+			&.bp {background-position: 100% -1030px;}
+			&.be {background-position: 100% -1062px;}
+			&.ba {background-position: 100% -1091px;}
+			&.bl {background-position: 100% -1122px;}
+			&.bc {background-position: 100% -1153px;}
+			&.un {background-position: 100% -1183px;}
+			&.ue {background-position: 100% -1214px;}
+			&.uce{background-position: 100% -878px;}
+			&.ul {background-position: 100% -1122px;}
+			&.up {background-position: 100% -1245px;}
+			&.cp {background-position: 100% -1277px;}
+
+			&.ab {background-position: 100% -1378px;}
+			&.aw {background-position: 100% -1414px;}
+			&.ah {background-position: 100% -1449px;}
+			&.ac {background-position: 100% -1487px;}
+			&.ahl {background-position: 100% -1552px;}
+			&.ad {background-position: 100% -1519px;}
+			&.ae {background-position: 100% -1590px;}
+			&.ap {background-position: 100% -1624px;}
+
+			&.afb {background-position: 0 -686px;}
+			&.atw {background-position: 0 -713px;}
+			&.agp {background-position: 0 -740px;}
+			&.ain {background-position: 0 -768px;}
+		}
+	}
+}
+
+// body override
+.signUp {
+	p {
+		line-height: 1.3em;
+	}
+	.subUiBar header h3 {text-align: right; font-size: 100%;}
+	.btn {
+		width: 100%;
+		padding: .4em;
+		color: #fff;
+		border: 0 none;
+		background-color: $green;
+		font-size: 2em;
+		cursor: pointer;
+		position: absolute;
+		bottom: 0;
+		left:0;
+		&:after {
+			content: "";
+			right: 3%;
+			@extend %arrowCircle;
+			position: absolute;
+		}
+		&:hover {
+			background-color: $red;
+		}
+	}
+	.footer .comp .nav a {
+		display: block;
+		float: right;
+		line-height: 1.8em;
+		width: auto;
+		color: #fff;
+		margin: 3em .4em;
+		&:hover {color: $red;}
+	}
+}
+.browse {
+	background-color: $blue;
+	border: 0 none;
+	color: #fff;
+	float: right;
+	font-size: 120%;
+	padding: .4em;
+	cursor: pointer;
+	margin: 0 1% 0 0;
+	& .icon {
+		background-position: 50% -174px;
+	    float: left;
+	    height: 1.2em;
+	    width: 1.2em;
+	    margin: 0 .4em 0 0;
+	}
+	&:hover {
+		background-color: $red;
+	}
+}
+
+// merchant-signUp
+.merchant-signUp {
+
+}
+.register {
+	@extend %joinBox;
+	h2 {
+		.icon {
+			background-color: $green;
+			background-position: 0 -908px;
+		}
+	}
+	.result {
+		overflow: hidden;
+		padding: 2%;
+		h2,h3,h4,h5,p,span,i {
+			float: right;
+			width: 94%;
+		}
+		h4 {color: $blue; font-size: 120%;}
+		&:hover {
+			background-color: $blue;
+			color: #fff;
+			h4 {color: #fff;}
+		}
+	}
+}
+.create {
+	@extend %joinBox;
+	.checkWrap {
+		margin: 2% 3% 0 7%;
+		float: left;
+	    overflow: hidden;
+	    width: 90%;
+	}
+	label {width: 94%;}
+	input[type="checkbox"] {width: 4%; margin: 0 2% 2% 0;}
+	h2 {
+		.icon {
+			background-color: $yellow;
+			background-position: 0 -939px;
+		}
+	}
+}
+.aboutBiz {
+	@extend %joinBox;
+	margin: 2% 0;
+	h2 {
+		.icon {
+			background-color: $blue;
+			background-position: 0 -969px;
+		}
+	}
+	.subTool {
+		input[type="checkbox"], label {
+			margin: 1% 1% 1% 0;
+			text-align: left;
+		}
+		input[type="checkbox"] {
+			clear: none;
+			&:nth-of-type(4n+4) {clear: left; background-color: #333;}
+		}
+		label {width: 25%;}
+		.added > img {
+			width: 23%;
+			display: block;
+			float: left;
+			border: .4em solid $blue;
+			margin: 1%;
+		}
+	}
+	.toolTip {
+		.toolBody {
+			left: -16.3em;
+			&:before {
+			    background-position: 100% -228px;
+			    left: 98%;
+			}
+		}
+		&.tError {
+			.toolBody {
+				&:before {
+					background-position: 100% -199px;
+				}
+			}
+		}
+	}
+	.added {
+		width: 100%;
+		float: left;
+		margin: 1% 0 0 0;
+	}
+}
+
+// toggle button
+.toggleOption {
+	width: 100%;
+	padding: .4em;
+	float: left;
+	color: #fff;
+	cursor: pointer;
+	background-color: $blue;
+	font-weight: bold;
+	font-size: 2em;
+	text-align: center;
+	&:hover {
+		background-color: $green;
+	}
+	& h4, & h5 {
+		display: inline-block;
+		line-height: 1.4em;
+	}
+	& h5 {display: none;}
+	& .icon {
+		background-position: 50% -2169px;
+	    height: 1.3em;
+	    width: 1.4em;
+	    float: left;
+	}
+	& .arrow {
+		@extend %arrowCircle;
+	}
+	&.consumer {
+		& h5 {display: inline-block;}
+		& h4 {display: none;}
+		& .icon {
+			background-position: 50% -2216px;
+		}
+	}
+}
+
+// consumer-signUp
+.consumer-signUp {
+	.register {
+		h2 {
+			.icon {margin: .9em .6em;}
+		}
+		.inputWrap {
+			p {
+				text-align: center;
+			}
+		}
+		.or {
+			@include border-radius(50%);
+			@include square-box($square-w:2.2em, $square-p:0.5em 0 1.7em 0);
+			background-color: $gray;
+			color: #FFFFFF;
+    		text-align: center;
+    		margin: 2% auto;
+		}
+	}
+	.facebook-signin {
+		background-color: $fb-blue;
+		overflow: hidden;
+		width: 60%;
+		margin: 2% auto 0 auto;
+		cursor: pointer;
+		&:hover {
+			background-color: $blue;
+		}
+		h3 {
+			color: #fff;
+			line-height: 3em;
+			padding: 0 .7em;
+			float: left;
+			p {
+				text-align: left;
+			}
+		}
+		.icon {
+			border-right:.1em solid #fff;
+			float: left;
+			@include square-box($square-w:3.5em);
+			background-position:-8% -408px;
+		}
+	}
+	.signUp-circle {
+		display: block;
+	    float: right;
+	    margin: 2% 6% 0 0;
+	    width: 40%;
+	}
+}

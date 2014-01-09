@@ -1,0 +1,24 @@
+.mc404, .mc503 {
+	background: url(../images/mc404-503.png) center -13% no-repeat;
+	clear: both;
+    display: block;
+    height: 363px;
+    margin: 4% auto;
+    overflow: hidden;
+    padding: 14% 4% 0 7%;
+    text-align: center;
+    width: 430px;
+}
+
+.mc503 {
+	background-position: center bottom;
+	margin: 5% auto;
+	padding: 13% 0 0 6%;
+}
+
+.col503 {
+	.logo {
+		margin: 0 auto;
+		float: none;
+	}
+}

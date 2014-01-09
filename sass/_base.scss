@@ -1,0 +1,469 @@
+* {
+	margin:0; 
+	padding:0; 
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+img {
+	border: 0 none;
+}
+body {
+	background: $body-bg;
+	color: $body-text-color;
+	font-size: $body-font-size;
+	font-family: $body-font-family;
+}
+
+.pageContent {
+	position: relative;
+	clear: both;
+}
+.col3 {
+	%allWrap {
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+	}
+	.mainSection {
+        @extend %allWrap;
+	}
+	.subSection {
+		@extend %allWrap;
+		float: left;
+	}
+	.asideSection {
+		@extend %allWrap;
+		float: right;
+	}
+}
+
+// Global Extend ---------------------------------------------
+
+// CLear
+%clear {
+	&:after {
+		clear:both;
+		content: '';
+		display: block;
+		width: 0;
+		height: 0;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+// Full width wrapper
+%gw {
+	margin: 0 auto;
+	width: $start-width;
+	@extend %clear;
+}
+
+// sub div spacing
+%sub-spacing {
+	& > div , & > ul {
+		margin: 0 0 1.875em 0;
+		&.filter {margin: -.6em 0 0 0;}
+	}
+	h2 {margin:0 0 3% 0;}
+}
+
+// main ad
+%ad {
+	margin: 0 auto 1.875em auto;
+	overflow:hidden;
+}
+
+// Main icon
+%iconBg {
+	background-image: url(../images/iconMC.png);
+	background-repeat: no-repeat;
+}
+
+// Main icon
+%iconDashboardBg {
+	background-image: url(../images/MC-DB-sprite.png);
+	background-repeat: no-repeat;
+}
+
+// arrow circle
+%arrowCircle {
+	width: 1.3em;
+	height: 1.3em;
+	float: right;
+	@extend %iconBg;
+	background-color: #fff;
+	background-position: 109% -1751px; 
+	@include border-radius(50%);
+}
+
+// Btn
+%btnAll {
+	font-size:1.4em;
+	line-height:1em;
+	padding:$btn-padding;
+	margin:0 auto;
+	border:0 none;
+    color: $btn-text-color;
+    width: 100%;
+    font-weight: normal;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    @include border-radius(.1em);
+    background:$btn-color;
+	&:hover {
+		cursor:pointer;
+		background:$btn-hover;
+	}
+}
+
+// count buble
+%countUi {
+    top: 4px;
+    left: 44px;
+    color: white;
+    height: 15px; 
+    line-height: 15px;
+    min-width: 15px;
+    padding: 0 4px;
+    position: absolute;
+    background-color: $red;
+    @include border-radius(10px);
+}
+
+// odd even background
+%nthBg {
+	background-color: $soft-bg;
+	&:nth-child(2n+1) {
+		background-color: $sub-bar;
+	}
+}
+
+%nthBg-dash {
+	background-color: $sub-bar;
+	&:nth-child(2n+1) {
+		background-color: $soft-bg;
+	}
+}
+
+// close 
+%close {
+	@extend %iconBg;
+	background-color: $sub-bar;
+    background-position: 103% 90%;
+    position: absolute;
+    display: block;
+	cursor: pointer;
+    height: 28px;
+    width: 28px;
+    &:hover {
+    	background-color: $main-bar;
+    }
+}
+
+// error
+%error {
+	background-color:$red;
+	line-height: 1.25em;
+	padding: .8% 1%;
+	color: #FFF;
+	.icon {
+		@include square-box($square-w:1.25em);
+		float: left;
+		margin: 0 .4em 0 0;
+		background-position:100% -2147px;
+	}
+}
+
+// imgMask
+%imgMask {
+	float: left;
+	margin: 0 4% 0 0;
+	display: block;
+	overflow: hidden;
+	width: 64px;
+	height: 64px;
+	@include border-radius(50%);
+	@include prefix($property:background-size, $value:contain);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #fff;
+	background-image: url(../images/imgMask.png);
+	img {opacity: 0;}
+}
+
+// viewMore
+%viewMore {
+	@extend %iconBg;
+	background-position:  100% 24%; 
+	display: block;
+	float: right;
+	cursor: pointer;
+	text-decoration: underline;
+	padding: 0 16px 0 0;
+	&:hover {
+		color: $blue;
+		background-position: 100% 23%;
+		text-decoration: none;
+	}
+}
+
+// ellipsis
+%ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+
+// works with HEX to RGBa
+%transparent-background {
+  background-color: transparent;
+  zoom: 1;
+}
+
+// spacing ui ---------------------------------------------
+// overflow
+%overflow {overflow:hidden;}
+
+// float
+%left {float: left;}
+%right {float: right;}
+
+// Loading
+.loading {
+	background-image: url(../images/loading.gif);
+	background-repeat: no-repeat;
+	background-position: center 40px;
+	background-color: $main-bg-color;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 99999;
+}
+
+// Tool - Error
+.toolTip {
+    position: relative;
+    display: inline-block;
+    float: left;
+    // min-width: 54%;
+    &.required {
+    	input[type="text"], input[type="number"], input[type="email"], input[type="password"], textarea, select {
+    		padding: 0.4em 2em 0.4em 1.6em;
+    	}
+    	&:before {
+    		content: "*";
+    		width: 20px;
+    		height: 20px;
+    		font-size: 3em;
+    		top: .1em;
+    		left: .2em;
+    		position: absolute;
+    		color: $red;
+    	}
+    }
+    input[type="text"], input[type="number"], input[type="email"], input[type="password"], textarea {
+    	padding:.4em 2em .4em .6em;
+    	width: 100%;
+    }
+    & > .icon {
+		height: 1.6em;
+	    width: 1.6em;
+	    position: absolute;
+	    right: 7px;
+	    top: .6em;
+	    @extend %iconBg;
+		@include border-radius(50%);
+		background-position:104% -112px;
+		background-color: $blue;
+		cursor: pointer;
+		z-index: 9999;
+		&:hover {
+			background-color: $green;
+			z-index: 999999;
+			.toolBody {
+				display: block;
+			}
+		}
+	}
+	.toolBody {
+		display: none;
+		width: 160px;
+		position: absolute;
+		left: 3em;
+		top: -2px;
+		background-color: $green;
+		color: #fff;
+		&:before {
+			@extend %iconBg;
+			background-position: 100% -167px;
+			content: "";
+			width: 11px;
+			height: 21px;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -8px;
+		}
+		.errorDesc, span {
+			padding: .4em .6em;
+		}
+		.errorDesc {display: none;}
+		span, img {display: block;}
+		img {width: 100%;}
+	}
+	&.tError {
+		.icon {
+			background-color: $red;
+			background-position:89% -112px;
+		}
+		.toolBody {
+			background-color: $red;
+			.errorDesc {
+				display: block; 
+				background-color: $red;
+				color: #fff;
+				font-weight: bold;
+				border: 0 none;
+			}
+			&:before {
+				background-position: 100% -137px;
+			}
+			span {
+				border: 3px solid $red;
+				border-top: 0 none;
+				background-color: $soft-bg;
+				color: $gray;
+			}
+		}
+		input[type="text"], input[type="number"], input[type="email"], input[type="password"], textarea,  .subTool {
+	    	border: .4em solid $red;
+	    }
+	}
+}
+.mainSection > div.toolTip {
+	margin: 0;
+	input[type="text"], input[type="number"], input[type="email"], input[type="password"], textarea,  .subTool {
+		margin: 0;
+	}
+}
+
+// Default Text and Input ---------------------------------------------
+a {
+	color:$link;
+	text-decoration: none;
+	&:hover {
+		color:$link-hover;
+	}
+}
+%hAll {
+	font-family: $h-font-family;
+	font-weight: $h-weight;
+	letter-spacing: .02em;
+}
+h1 {
+	@extend %hAll;
+    font-size: $h1-size;
+    color:$headline-color;
+}
+h2 {
+	@extend %hAll;
+    font-size: $h2-size;
+    color:$subheadline-color;
+}
+h3 {
+	@extend %hAll;
+    font-size: $h3-size;
+    color:$subheadline-color;
+}
+h4 {
+	@extend %hAll;
+    font-size: $h4-size;
+}
+h5 {
+	@extend %hAll;
+    font-size: $h5-size;
+}
+h6 {
+	@extend %hAll;
+    font-size: $h6-size;
+}
+label {
+    font-size: $label-size;
+}
+p {
+    font-size: $p-size;
+    line-height: 1.6em;
+}
+i {
+    font-size: .9em;
+}
+ol, ul {
+	list-style-position:inside;
+}
+// Form Elements
+input[type="text"], input[type="number"], input[type="email"], input[type="password"], textarea, .subTool {
+    padding: .4em .6em;
+    border: .4em solid $sub-bar;
+    font-size: 1em;
+    background: $input-bg;
+    color: $input-text-color;
+    font-family: $custom1-font-family;
+	margin: 0 0 1%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    &:focus {
+	    color: $input-focus-text-color;
+		border: .4em solid $blue;
+		background:$input-bg;
+	    outline:none;
+	}
+}
+button:focus {
+	outline:none;
+}
+input:focus::-webkit-input-placeholder, input:focus::-moz-placeholder {
+    color: $input-focus-text-color;
+    @include box-shadow(none);
+}
+textarea {
+	min-height:120px;
+}
+select::-ms-expand {
+    display: none;
+}
+select {
+	width:100%;
+	font-size:1em;
+	line-height:1.2em;
+	margin: 0 0 2% 0;
+	border:.4em solid $sub-bar;
+	@extend %iconBg;
+	background-position: 100% -678px;
+	background-color: #fff;
+	@include border-radius(0);
+	text-indent: 0.01px;
+    text-overflow: "";
+    padding:.3em 2em .3em .3em ;
+    padding:.3em .2em .3em .3em \9;
+    *background-image:none;
+    color: $input-text-color;
+    &:focus{
+    	color: $input-focus-text-color;
+    	outline:none;
+   	 	background-position:100% -794px;
+    	border:4px solid $blue;
+    }
+}
+button, input[type="button"], input[type="submit"] {
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-ms-appearance:none;
+	-o-appearance:none;
+	appearance:none;
+	@include border-radius(0);
+}

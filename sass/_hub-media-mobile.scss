@@ -1,0 +1,26 @@
+.col1-hub {
+	.hubMain, .srpMap, .hub-tab {
+		width: 100%;
+	}
+	.srpMap {
+		display:none;
+	}
+	div.heroImg {display: none;}
+	.overlayInfo .overlayBody {
+		width:100%;
+		.toolTip {
+			min-width: 49%;
+		}
+	}
+}
+
+.col1-hub, .col2-srp {
+	.hero {
+		text-align: center;
+		h2 {margin: 0;}
+		h4 {a{display: block;}}
+		&:hover {
+			h4 {a{color: #fff;}}
+		}
+	}
+}

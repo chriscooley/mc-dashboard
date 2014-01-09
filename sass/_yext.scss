@@ -1,0 +1,71 @@
+
+.yext-content {
+	background-color: #F9F9F9 !important;
+}
+.yext-content .yext-tab-content {
+	background-color: #F9F9F9;
+    border: 0 none !important;
+    color: inherit;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+.yext-content .yext-tab-bar-top {
+	background-color: #F2F2F2;
+	padding: 0 !important;
+	border-bottom: 10px solid #4B4B4B !important;
+}
+.yext-content .yext-tab {
+	border-style: none;
+	padding: 0.8em 0;
+	border-bottom: 10px solid #4B4B4B;
+	background-color: #F2F2F2;
+    color: #4B4B4B;
+    padding: 0.8em 0;
+    margin: 0 0 -10px 0;
+    width: 18%;
+    text-align: center;
+    -webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+
+}
+.yext-content .yext-tab-selected {
+	top:0;
+	border-bottom: 10px solid #39A7DE;
+	color: #39A7DE;
+	padding: 0.8em 0;
+	width: 18%;
+	margin: 0 0 -10px 0;
+	background-color: #E5E5E5;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+.yext-content a {
+	color: #42A7DD;
+}
+.yext-content a:hover {
+	color: #F15B50;
+}
+.yext-content .yext-menu-list > li{
+	background-color: #f2f2f2;
+	border-top: none !important;
+	padding: 3%;
+}
+.yext-content .yext-menu-list > li:nth-child(2n+1) {
+	background-color: #e5e5e5;
+}
+.yext-content .yext-menu-section {
+	border: none;
+	padding: .4em 0;
+}
+
+.yext-special-offer {
+	padding: 2px 0 3px 23px;
+
+}
+.yext-pixel-container {
+	margin: 0;
+	padding: 0;
+}

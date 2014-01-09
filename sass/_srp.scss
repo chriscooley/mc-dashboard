@@ -1,0 +1,240 @@
+// srp result
+.srp {
+	overflow: hidden;
+	width: 100%;
+	list-style: none;
+	.result {
+		overflow: hidden;
+		padding: 0;
+		margin: 0 0 2% 0;
+		& > a {
+			overflow: hidden;
+			display: block;
+		}
+		&.top {
+			.srpHeader {
+				background-color:$green;
+				.title {
+					&:before {
+						background-color: darken($green, 14%);
+					}
+				}
+				&:hover {
+					background-color: $blue;
+					.title:before, .merchantScore {
+						background-color: darken($blue, 14%);
+					}
+				}
+			}
+			.title {
+				width: 78%;
+				& > h3 {
+					width: 70%;
+				}
+			}
+			.read {
+				&:hover {
+					background-color: lighten($blue, 10%);
+				}
+			}
+		}
+		.srpHeader {
+			width: 100%;
+			overflow: hidden;
+			background-color:$blue;
+			.title {
+				&:before {
+					background-color: darken($blue, 14%);
+				}
+			}
+			&:hover {
+				background-color: $green;
+				.title:before {
+					background-color: darken($green, 14%);
+				}
+			}
+		}
+		.title, .read {float: left;}
+		.title {
+			width: 94%;
+			.star {
+			    float: right;
+			    margin: .8em 0 0 1.7em;
+			    .rtng {
+			    	color: #fff;
+			    	font-weight: bold;
+			    	font-size: .95em;
+			    }
+			}
+			& > h3 {
+				line-height: 1.2em;
+				color: #fff;
+				float: left;
+				padding: .6em;
+				width: 74%;
+			}
+			.icon.pin {
+				float: right;
+				background-position: 0 0;
+				background-position: -2px -1834px;
+				@include square-box($square-w:1.7em, $square-p:0 0 1.2em 0);
+			}
+		}
+		.read {
+			display: inline-block;
+			position: relative;
+			width: 6%;
+			margin: 0;
+			&:hover {
+				background-color: lighten($green, 10%);
+			}
+			.icon {
+				background-position: 0 -1789px;
+				height: 18px;
+    			width: 26px;
+    			margin: 0.74em auto;
+			}
+			span {
+				@extend %countUi;
+				font-weight: normal;
+				font-size: 80%;
+				left: auto;
+				top: 0;
+				left: 50%;
+				padding: 0 .5em;
+				position: absolute;
+				margin: 0;
+			}
+		}
+		& > span {margin: 0;}
+		.star {
+			float: left; 
+			margin: 1.5em 0 0 1.7em;
+		}
+		.directions {margin: 1.5% 0 2% 0;}
+		.phone {margin: 2% 0 0 0;}
+		.imgMask {
+			float: left;
+			margin: 2%;
+		}
+		.merchantScore {
+			width: 16%;
+			padding: 0 0 0 1%;
+			margin: 0;
+			float: right;
+			line-height: 2.3em;
+			background-color: darken($green, 14%);
+			h3, h5 {background-color:transparent;}
+			h3 {
+				font-size: 1em;
+				width: 30%;
+				float:left;
+				height: 2.4em;
+			}
+			h5 {
+				margin: 0;
+				padding: 0; 
+				line-height: 1.2em;
+				font-size: 2.4em;
+				float: right;
+				width: 70%;
+				color:#fff;
+			}
+		}
+		.blurb {
+			padding: 2%;
+			float: left;
+			width: 100%;
+			font-style: italic;
+			background-color: darken($sub-bar, 5%);
+			color: $gray;
+			line-height: 1.5em;
+			&:hover {
+				color: $blue;
+			}
+		}
+	}
+}
+.srpMap {
+	position: relative;
+	.loading {background-position: center center;}
+	.map {
+		@include square-box($square-w:97%, $circle: true, $square-b: true, $border-size: 6px, $border-style: solid $blue);
+		// height: 430px\9; 
+		// width: 430px\9;
+	}
+	.mqacopyright {
+		position: relative;
+		padding: 4% 0 0 0;
+		a {
+			display: inline; 
+			float: none;
+		}
+	}
+	.scale_bar {margin: 5px 0 0 0;}
+	.questyLogo {top:auto !important; margin: -80px 0 0 0;}
+}
+
+.mapBubble {
+	overflow: hidden;
+	.phone {
+	    font-size: 1.6em;
+	    line-height: 1.8em;
+	}
+	.star {
+		margin:4% 0 4% 1.7em;
+	}
+	.name {font-size: 1.6em; font-weight: bold;}
+}
+.col2-srp {
+	.ad {
+		width: 100%;
+		font-size: 2em;
+		background-color: $sub-bar;
+		color: #fff;
+		text-align: center;
+		padding: 2em 0;
+		margin: 0 0 2% 0;
+	}
+	.mainSection {
+		& > h1 {
+			font-size: 2.4em;
+			margin: 0 0 .5em 0;
+			text-transform: capitalize;
+		}
+	}
+	.subSection {
+		.lPhotos {
+			h2 {
+				margin: 0 0 1% 0;
+			}
+		}
+	}
+}
+
+
+// directory
+.lPhotos {
+	overflow: hidden;
+	h2 {
+		margin: 0 0 1% 0;
+	}
+	.imgMask {
+		width: 33.33%;
+		padding: 0 0 33.33% 0;
+		border-radius: 0;
+		margin: 0;
+	}
+}
+
+// srp map
+.col1-hub, .col2-srp {
+	
+	.srpMap {
+		.map {
+			height: 430px; 
+			width: 430px;
+		}
+	}
+}
+

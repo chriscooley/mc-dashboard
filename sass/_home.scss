@@ -1,0 +1,71 @@
+.home {
+	.boldUiBar {
+		background: url('../images/home-bg.jpg') center center no-repeat;
+		clear: both;
+	    float: none;
+	    overflow: hidden;
+	}
+	.searchBox {
+		@include transparent(darken($blue, 20%), .8);
+		width: 40%;
+		padding: 3%;
+		margin:4% auto;
+		float: none;
+		text-align: center;
+		overflow: hidden;
+		input[type="text"] {
+			width: 100%;
+			font-size: 140%;
+		}
+		p, h1 {color: #fff; line-height: 1em;}
+		.search {
+			width: 100%;
+			border: 0 none;
+			background-color: $blue;
+			cursor: pointer;
+			font-size: 160%;
+			color: #fff;
+			line-height: 2em;
+			.icon {
+				background-position: 50% -174px;
+			    display: inline-block;
+			    height: 17px;
+			    width: 20px;
+			    margin: 0 .4em 0 0;
+			}
+			&:hover {
+				background-color: $red;
+			}
+		}
+	}
+	.signUp-circle {
+		width: 30%;
+	}
+	.homeSub {
+		width: 29%;
+		margin: 0 2.15% 4% 2.15%;
+		padding: 1.4em;
+		float: left;
+		color: #fff;
+		display: block;
+		@include transparent(darken($gray, 20%), .6);
+		&:hover {
+			@include transparent(darken($red, 20%), .8);
+		}
+		h4 {font-size: 1.4em; margin: 0 0 1% 0;}
+		p {font-size: 1em; line-height: 1.4em;}
+		.icon {
+			width: 60px;
+			height: 50px;
+			float: left;
+			margin: 2% 6% 0 0;
+		}
+		&.mer {.icon {background-position: 50% -98px;}}
+		&.adv {.icon {background-position: 50% 0;}}
+		&.dea {.icon {background-position: 50% -50px;}}
+		
+	}
+	.footer {
+		margin: 0;
+	}
+}	

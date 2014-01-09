@@ -1,0 +1,72 @@
+// .tabs {
+// 	a, .more {
+// 		text-align: left;
+// 		font-size: 100%;
+// 	}
+// 	a > span {
+// 		display: block;
+// 		float: right;
+// 		margin: 0 .4em 0 0;
+// 		position: relative;
+// 	    font-size: 80%;
+// 	}
+// 	.icon {
+// 		float: left;
+// 		margin: 0 .1em 0 .4em;
+// 	}
+// 	.more {
+// 		padding: .8em 0 .8em .6em;
+// 		.icon.mo {
+// 			margin: 0 .6em 0 0;
+// 			float: right;
+// 		}
+// 		.moreNav {
+// 			margin: 1em 0 0 0;
+// 			font-size: 100%;
+// 		}
+// 	}
+// }
+.toolTip {
+    min-width: 38%;
+}
+.tabs {
+	a span, .more span {
+		left: 76px;
+		top: 6px;
+	}
+	a, .more {
+	    font-size: 90%;
+	}
+}
+.claim {
+	.arrow {
+	    left: -34px;
+	}
+}
+.writeReview, .userInput {
+	.myRtng, .reviewOption, .inputOption {
+		width: 22%;
+	} 
+	.toolTip, input.title[type="text"], .reviewText, .gError {
+		width: 76%;
+	}
+}
+.slippy_map {
+	width: 717px;
+	height: 556px;
+}
+.connections {
+	.result {
+		min-height: 320px;
+		padding: 2% 0 8% 0;
+		.merchantScore {padding: 2% 18% 4% 18%;}
+	}
+}
+.create {
+	.checkWrap {
+		margin: 2% 10% 0 15%;
+		float: left;
+	    overflow: hidden;
+	    width: 75%;
+	}
+}
